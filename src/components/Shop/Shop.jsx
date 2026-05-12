@@ -30,15 +30,17 @@ export const Shop = () => {
 
   return (
     <div>
-      <h1>The Shop</h1>
       {data.map((product) => (
         <div key={product.id} className="product-card">
           <div>{product.title}</div>
+          <p>{product.category}</p>
           <img
             src={product.image}
             alt={product.title}
             style={{ width: '100px' }}
           />
+          <p>$ {product.price}</p>
+          <p>{product.description}</p>
         </div>
       ))}
     </div>
