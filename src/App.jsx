@@ -1,8 +1,7 @@
-function App() {
+import { Shop } from './components/Shop/Shop';
 
-  return (
-    <p>Hello world</p>
-  )
+function App() {
+  return <Shop />;
 }
 
-export default App
+export default App;
