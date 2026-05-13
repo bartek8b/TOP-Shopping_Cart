@@ -25,6 +25,7 @@ const useData = () => {
 export const Shop = () => {
   const { data, error, loading } = useData();
 
+  // TODO: check the test file before changing textNodes
   if (loading) return <p>Loading</p>;
   if (error) return <p>A network error was encountered</p>;
 
