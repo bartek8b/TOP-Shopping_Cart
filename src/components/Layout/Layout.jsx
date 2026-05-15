@@ -1,8 +1,14 @@
+import { Nav } from '../Nav/Nav';
+
 export function Layout({ children }) {
   return (
     <>
-      <header>Header</header>
+      <header>
+        <Nav />
+      </header>
+
       {children}
+      
       <footer>Footer</footer>
     </>
   );
