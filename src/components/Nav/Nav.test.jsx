@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import { Nav } from './Nav';
+import styles from './Nav.module.css';
 
 describe('Nav', () => {
   function renderNav(initialRoute = '/') {
@@ -46,10 +47,10 @@ describe('Nav', () => {
     renderNav('/shop');
 
     expect(screen.getByRole('link', { name: /go to shop/i })).toHaveClass(
-      'active',
+      styles.active,
     );
     expect(screen.getByRole('link', { name: /go to cart/i })).not.toHaveClass(
-      'active',
+      styles.active,
     );
   });
 });
