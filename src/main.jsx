@@ -1,25 +1,30 @@
+import 'modern-normalize/modern-normalize.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Landing from './pages/Landing/Landing.jsx';
-import Shop from './pages/Shop/Shop.jsx';
-import Cart from './pages/Cart/Cart.jsx';
-import 'modern-normalize/modern-normalize.css';
+import { Layout } from './components/Layout/Layout';
+import { Landing } from './pages/Landing/Landing';
+import { Shop } from './pages/Shop/Shop';
+import { Cart } from './pages/Cart/Cart';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Landing />,
-    index: true,
-    // errorElement: <ErrorPage />,
-  },
-  {
-    path: "shop",
-    element: <Shop />,
-  },
-    {
-    path: "cart",
-    element: <Cart />,
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Landing />,
+      },
+      {
+        path: 'shop',
+        element: <Shop />,
+      },
+      {
+        path: 'cart',
+        element: <Cart />,
+      },
+    ],
   },
 ]);
 
