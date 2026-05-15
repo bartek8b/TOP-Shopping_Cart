@@ -2,6 +2,8 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Landing from './pages/Landing/Landing.jsx';
+import Shop from './pages/Shop/Shop.jsx';
+import Cart from './pages/Cart/Cart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -10,10 +12,14 @@ const router = createBrowserRouter([
     index: true,
     // errorElement: <ErrorPage />,
   },
-  // {
-  //   path: "profile",
-  //   element: <Profile />,
-  // },
+  {
+    path: "shop",
+    element: <Shop />,
+  },
+    {
+    path: "cart",
+    element: <Cart />,
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(
