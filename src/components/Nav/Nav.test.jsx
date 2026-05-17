@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
-import { Nav } from './Nav';
 import styles from './Nav.module.css';
+
+vi.mock('../../assets/icons/cart-shopping-solid-full.svg?react', () => ({
+  default: (props) => <svg data-testid="cart-icon" {...props} />,
+}));
+
+import { Nav } from './Nav';
 
 describe('Nav', () => {
   function renderNav(initialRoute = '/') {
