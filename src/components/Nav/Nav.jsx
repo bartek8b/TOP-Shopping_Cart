@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Nav.module.css';
+import CartIcon from '../../assets/icons/cart-shopping-solid-full.svg?react';
 
 export const Nav = () => {
   return (
@@ -23,8 +24,7 @@ export const Nav = () => {
           className={({ isActive }) => (isActive ? styles.active : undefined)}
           aria-label="Go to cart"
         >
-          {/* To be replaced with svg icon */}
-          Cart
+          <CartIcon aria-hidden="true" />
         </NavLink>
       </div>
     </nav>
