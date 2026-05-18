@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
+import { CartProvider } from '../CartProvider/CartProvider';
 import styles from './Nav.module.css';
 
 vi.mock('../../assets/icons/cart-shopping-solid-full.svg?react', () => ({
@@ -12,9 +13,11 @@ import { Nav } from './Nav';
 describe('Nav', () => {
   function renderNav(initialRoute = '/') {
     return render(
-      <MemoryRouter initialEntries={[initialRoute]}>
-        <Nav />
-      </MemoryRouter>,
+      <CartProvider>
+        <MemoryRouter initialEntries={[initialRoute]}>
+          <Nav />
+        </MemoryRouter>
+      </CartProvider>,
     );
   }
 

@@ -1,8 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import { useCart } from '../CartProvider/useCart';
 import styles from './Nav.module.css';
 import CartIcon from '../../assets/icons/cart-shopping-solid-full.svg?react';
 
 export const Nav = () => {
+  const { cartCount } = useCart();
+
   return (
     <nav>
       <NavLink to="/" end aria-label="Go to Home page">
@@ -16,7 +19,6 @@ export const Nav = () => {
           className={({ isActive }) => (isActive ? styles.active : undefined)}
           aria-label="Go to shop"
         >
-          {/* To be replaced with svg icon */}
           Shop
         </NavLink>
         <NavLink
@@ -24,7 +26,10 @@ export const Nav = () => {
           className={({ isActive }) => (isActive ? styles.active : undefined)}
           aria-label="Go to cart"
         >
-          <CartIcon aria-hidden="true" />
+          <div className={styles.iconWrapper}>
+            <CartIcon aria-hidden="true" />
+            {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
+          </div>
         </NavLink>
       </div>
     </nav>
