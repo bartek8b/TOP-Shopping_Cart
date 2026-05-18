@@ -23,26 +23,26 @@ export const CartProvider = ({ children }) => {
   }
 
   function removeFromCart(id, quantity = 1) {
-    setCart((currentCart) => {
-      return currentCart
-        .map((cartItem) => {
-          if (cartItem.id === id) {
-            return { ...cartItem, quantity: cartItem.quantity - quantity };
-          }
-
-          return cartItem;
-        })
-        .filter((cartItem) => cartItem.quantity > 0);
-    });
+    setCart((currentCart) =>
+      currentCart
+        .map((cartItem) =>
+          cartItem.id === id
+            ? { ...cartItem, quantity: cartItem.quantity - quantity }
+            : cartItem,
+        )
+        .filter((cartItem) => cartItem.quantity > 0),
+    );
   }
 
   function clearCart() {
     setCart([]);
   }
 
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart }}
+      value={{ cart, cartCount, addToCart, removeFromCart, clearCart }}
     >
       {children}
     </CartContext.Provider>
