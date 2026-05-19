@@ -28,7 +28,6 @@ describe('Shop Component', () => {
 
     render(<Shop />);
 
-    // Fragile test - to be checked by aria
     expect(screen.getByText(/Loading/i)).toBeInTheDocument();
 
     await waitFor(() => {
@@ -45,7 +44,9 @@ describe('Shop Component', () => {
     render(<Shop />);
 
     await waitFor(() => {
-      expect(screen.getByText(/A network error was encountered/i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/A network error was encountered/i),
+      ).toBeInTheDocument();
     });
   });
 });
