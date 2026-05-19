@@ -20,7 +20,7 @@ export const Landing = () => {
         </div>
       </section>
 
-      <section>
+      <section className="monoLayout">
         <h2>Components</h2>
         <div className="badgesContainer">
           <div className="componentBadge">
@@ -38,8 +38,8 @@ export const Landing = () => {
         </div>
       </section>
 
-      <section>
-        <div>Check the code</div>
+      <section className="monoLayout">
+        <h2>Check the code</h2>
         <a
           href="https://github.com/bartek8b/TOP-Shopping_Cart"
           target="_blank"
