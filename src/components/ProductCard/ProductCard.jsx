@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useCart } from '../CartProvider/useCart';
 import MinusIcon from '../../assets/icons/circle-minus-solid-full.svg?react';
 import PlusIcon from '../../assets/icons/circle-plus-solid-full.svg?react';
 import AddToCartIcon from '../../assets/icons/cart-plus-solid-full.svg?react';
 
 export const ProductCard = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
 
   function handleIncrease() {
     setQuantity((prev) => prev + 1);
@@ -12,6 +14,10 @@ export const ProductCard = ({ product }) => {
 
   function handleDecrease() {
     setQuantity((prev) => Math.max(1, prev - 1));
+  }
+
+  function handleAddToCart() {
+    addToCart(product, quantity);
   }
 
   return (
@@ -48,7 +54,7 @@ export const ProductCard = ({ product }) => {
           </button>
         </div>
       </div>
-      <button type="button">
+      <button type="button" onClick={handleAddToCart}>
         Add to cart <AddToCartIcon />
       </button>
     </div>
