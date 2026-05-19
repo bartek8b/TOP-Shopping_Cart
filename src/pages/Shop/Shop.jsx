@@ -24,7 +24,9 @@ const useData = () => {
 
 export const Shop = () => {
   const { data, error, loading } = useData();
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
+  // TODO: Add loader & error msg
   if (loading) return <p>Loading</p>;
   if (error) return <p>A network error was encountered</p>;
 
@@ -32,25 +34,53 @@ export const Shop = () => {
 
   data.forEach((product) => {
     if (!uniqueCategories.includes(product.category)) {
+      // TODO: Add capitals
       uniqueCategories.push(product.category);
     }
   });
 
+  function handleSelect(e) {
+    setSelectedCategory(e.target.value);
+  }
+
   return (
     <>
-      {data.map((product) => (
-        <div key={product.id} className="product-card">
-          <div>{product.title}</div>
-          <p>{product.category}</p>
-          <img
-            src={product.image}
-            alt={product.title}
-            style={{ width: '100px' }}
-          />
-          <p>$ {product.price}</p>
-          <p>{product.description}</p>
-        </div>
-      ))}
+      <label htmlFor="category">
+        Category:
+        <select
+          id="category"
+          name="selectedCategory"
+          value={selectedCategory}
+          onChange={handleSelect}
+        >
+          <option value="All">All</option>
+          {uniqueCategories.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <section>
+        {data.map(
+          (product) =>
+            (product.category === selectedCategory ||
+              selectedCategory === 'All') && (
+              <div key={product.id} className="product-card">
+                <div>{product.title}</div>
+                <p>{product.category}</p>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  style={{ width: '100px' }}
+                />
+                <p>$ {product.price}</p>
+                <p>{product.description}</p>
+              </div>
+            ),
+        )}
+      </section>
     </>
   );
 };
