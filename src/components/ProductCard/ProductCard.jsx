@@ -34,13 +34,14 @@ export const ProductCard = ({ product }) => {
             onClick={handleDecrease}
             aria-label="Decrease quantity"
           >
-            <MinusIcon />
+            <MinusIcon aria-hidden="true" />
           </button>
           {/* Quantity input */}
           <input
             type="number"
             value={quantity}
             readOnly
+            onChange={() => {}}
             min="1"
             aria-label="Quantity"
           />
@@ -50,12 +51,12 @@ export const ProductCard = ({ product }) => {
             onClick={handleIncrease}
             aria-label="Increase quantity"
           >
-            <PlusIcon />
+            <PlusIcon aria-hidden="true" />
           </button>
         </div>
       </div>
       <button type="button" onClick={handleAddToCart}>
-        Add to cart <AddToCartIcon />
+        Add to cart <AddToCartIcon aria-hidden="true" />
       </button>
     </div>
   );
