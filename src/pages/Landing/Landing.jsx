@@ -4,7 +4,7 @@ import CodeIcon from '../../assets/icons/file-code-solid-full.svg?react';
 
 export const Landing = () => {
   return (
-    <>
+    <div className='landingContainer'>
       <section className="splitLayout">
         <h1 className="firstChild">GoCart</h1>
         <div className="secondChild">
@@ -49,6 +49,6 @@ export const Landing = () => {
           Repo
         </a>
       </section>
-    </>
+    </div>
   );
 };
