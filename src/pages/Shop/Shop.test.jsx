@@ -55,4 +55,34 @@ describe('Shop Component', () => {
     expect(screen.getByText('Golden ring')).toBeInTheDocument();
     expect(screen.queryByText('Laptop bag')).not.toBeInTheDocument();
   });
+
+  it('renders loader while data is loading', () => {
+    fetch.mockImplementation(() => new Promise(() => {}));
+
+    render(
+      <CartProvider>
+        <Shop />
+      </CartProvider>,
+    );
+
+    expect(screen.getByText(/loading data/i)).toBeInTheDocument();
+  });
+
+  it('renders fetch error message when server responds with error status', async () => {
+    fetch.mockResolvedValue({
+      status: 500,
+    });
+
+    render(
+      <CartProvider>
+        <Shop />
+      </CartProvider>,
+    );
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(/unable to load products right now/i),
+      ).toBeInTheDocument();
+    });
+  });
 });

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ProductCard } from '../../components/ProductCard/ProductCard';
+import { Loader } from '../../components/Loader/Loader';
+import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage';
 
 // Custom hook
 const useData = () => {
@@ -27,9 +29,8 @@ export const Shop = () => {
   const { data, error, loading } = useData();
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  // TODO: Add loader & error msg
-  if (loading) return <p>Loading</p>;
-  if (error) return <p>A network error was encountered</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorMessage type="fetch" />;
 
   const uniqueCategories = [];
 
@@ -45,7 +46,7 @@ export const Shop = () => {
   }
 
   return (
-    <div className='shopContainer'>
+    <div className="shopContainer">
       <label htmlFor="category">
         Category:
         <select
