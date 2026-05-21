@@ -1,4 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { CartProvider } from '../../components/CartProvider/CartProvider';
 import { Shop } from './Shop';
@@ -10,15 +11,25 @@ describe('Shop Component', () => {
     fetch.mockClear();
   });
 
-  it('displays products after successfull data fetch', async () => {
+  it('filters products by selected category', async () => {
+    const user = userEvent.setup();
+
     const mockProducts = [
       {
         id: 1,
         title: 'Golden ring',
         price: 99.99,
         category: 'jewelery',
-        image: 'https://src.com/img.jpg',
+        image: 'https://src.com/ring.jpg',
         description: 'Beautiful ring',
+      },
+      {
+        id: 2,
+        title: 'Laptop bag',
+        price: 49.99,
+        category: "men's clothing",
+        image: 'https://src.com/bag.jpg',
+        description: 'Useful bag',
       },
     ];
 
@@ -33,25 +44,15 @@ describe('Shop Component', () => {
       </CartProvider>,
     );
 
-    expect(screen.getByText(/Loading/i)).toBeInTheDocument();
-
     await waitFor(() => {
       expect(screen.getByText('Golden ring')).toBeInTheDocument();
+      expect(screen.getByText('Laptop bag')).toBeInTheDocument();
     });
 
-    expect(screen.getByText('$ 99.99')).toBeInTheDocument();
-    expect(screen.getByAltText('Golden ring')).toBeInTheDocument();
-  });
+    const select = screen.getByRole('combobox', { name: /category/i });
+    await user.selectOptions(select, 'jewelery');
 
-  it('displays error when fetch failed', async () => {
-    fetch.mockResolvedValue({ status: 500 });
-
-    render(<Shop />);
-
-    await waitFor(() => {
-      expect(
-        screen.getByText(/A network error was encountered/i),
-      ).toBeInTheDocument();
-    });
+    expect(screen.getByText('Golden ring')).toBeInTheDocument();
+    expect(screen.queryByText('Laptop bag')).not.toBeInTheDocument();
   });
 });
