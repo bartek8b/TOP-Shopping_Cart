@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ProductCard } from '../../components/ProductCard/ProductCard';
 import { Loader } from '../../components/Loader/Loader';
 import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage';
+import { capitalizeFirstLetter } from '../../utils/capitalizeFirstLetter';
 
 // Custom hook
 const useData = () => {
@@ -36,7 +37,6 @@ export const Shop = () => {
 
   data.forEach((product) => {
     if (!uniqueCategories.includes(product.category)) {
-      // TODO: Add capitals
       uniqueCategories.push(product.category);
     }
   });
@@ -58,7 +58,7 @@ export const Shop = () => {
           <option value="All">All</option>
           {uniqueCategories.map((c) => (
             <option key={c} value={c}>
-              {c}
+              {capitalizeFirstLetter(c)}
             </option>
           ))}
         </select>
