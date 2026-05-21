@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ProductCard } from '../../components/ProductCard/ProductCard';
 
 // Custom hook
 const useData = () => {
@@ -67,17 +68,7 @@ export const Shop = () => {
           (product) =>
             (product.category === selectedCategory ||
               selectedCategory === 'All') && (
-              <div key={product.id} className="product-card">
-                <div>{product.title}</div>
-                <p>{product.category}</p>
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  style={{ width: '100px' }}
-                />
-                <p>$ {product.price}</p>
-                <p>{product.description}</p>
-              </div>
+              <ProductCard key={product.id} product={product} />
             ),
         )}
       </section>

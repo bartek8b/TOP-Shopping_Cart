@@ -1,5 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { CartProvider } from '../../components/CartProvider/CartProvider';
 import { Shop } from './Shop';
 
 globalThis.fetch = vi.fn();
@@ -26,7 +27,11 @@ describe('Shop Component', () => {
       json: async () => mockProducts,
     });
 
-    render(<Shop />);
+    render(
+      <CartProvider>
+        <Shop />
+      </CartProvider>,
+    );
 
     expect(screen.getByText(/Loading/i)).toBeInTheDocument();
 
