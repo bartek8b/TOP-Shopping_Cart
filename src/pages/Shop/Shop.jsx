@@ -45,7 +45,7 @@ export const Shop = () => {
   }
 
   return (
-    <>
+    <div className='shopContainer'>
       <label htmlFor="category">
         Category:
         <select
@@ -72,6 +72,6 @@ export const Shop = () => {
             ),
         )}
       </section>
-    </>
+    </div>
   );
 };
