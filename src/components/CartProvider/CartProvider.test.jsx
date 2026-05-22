@@ -5,7 +5,14 @@ import { CartProvider } from './CartProvider';
 import { useCart } from './useCart';
 
 function TestComponent() {
-  const { cart, cartCount, addToCart, removeFromCart, clearCart } = useCart();
+  const {
+    cart,
+    cartCount,
+    addToCart,
+    removeFromCart,
+    deleteFromCart,
+    clearCart,
+  } = useCart();
 
   return (
     <>
@@ -35,6 +42,8 @@ function TestComponent() {
       <button onClick={() => removeFromCart(1, 1)}>Remove 1 keyboard</button>
 
       <button onClick={() => removeFromCart(1, 3)}>Remove 3 keyboards</button>
+
+      <button onClick={() => deleteFromCart(1)}>Remove all keyboards</button>
 
       <button onClick={clearCart}>Clear cart</button>
     </>
@@ -148,6 +157,24 @@ describe('CartProvider component', () => {
     expect(screen.getByText(/unique items: 0/i)).toBeInTheDocument();
     expect(screen.getByText(/total items: 0/i)).toBeInTheDocument();
     expect(screen.getByText(/first item quantity: 0/i)).toBeInTheDocument();
+  });
+
+  it('deletes an item from the cart when the delete button is clicked', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <CartProvider>
+        <TestComponent />
+      </CartProvider>,
+    );
+
+    await user.click(screen.getByRole('button', { name: /add 2 keyboards/i }));
+    await user.click(
+      screen.getByRole('button', { name: /remove all keyboards/i }),
+    );
+
+    expect(screen.getByText(/unique items: 0/i)).toBeInTheDocument();
+    expect(screen.getByText(/total items: 0/i)).toBeInTheDocument();
   });
 
   it('clears the cart', async () => {
