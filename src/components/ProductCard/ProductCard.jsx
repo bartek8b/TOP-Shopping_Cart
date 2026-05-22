@@ -21,7 +21,7 @@ export const ProductCard = ({ product }) => {
   }
 
   return (
-    <div className="card">
+    <article className="card">
       <h3>{product.title}</h3>
       <img src={product.image} alt={product.title} />
       <p>{product.description}</p>
@@ -58,6 +58,6 @@ export const ProductCard = ({ product }) => {
       <button type="button" onClick={handleAddToCart}>
         Add to cart <AddToCartIcon aria-hidden="true" />
       </button>
-    </div>
+    </article>
   );
 };
