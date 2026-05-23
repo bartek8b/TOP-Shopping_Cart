@@ -22,11 +22,11 @@ export const CartProvider = ({ children }) => {
     });
   }
 
-  function removeFromCart(id, quantity = 1) {
+  function removeFromCart(item, quantity = 1) {
     setCart((currentCart) =>
       currentCart
         .map((cartItem) =>
-          cartItem.id === id
+          cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity - quantity }
             : cartItem,
         )
