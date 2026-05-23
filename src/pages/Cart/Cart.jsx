@@ -3,7 +3,7 @@ import { CartItem } from '../../components/CartItem/CartItem';
 import RecycleIcon from '../../assets/icons/recycle-solid-full.svg?react';
 import CheckOutIcon from '../../assets/icons/circle-dollar-to-slot-solid-full.svg?react';
 import { useState } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 export const Cart = () => {
   const { cart, clearCart } = useCart();
