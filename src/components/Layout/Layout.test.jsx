@@ -31,6 +31,6 @@ describe('Layout Component', () => {
     expect(
       screen.getByRole('link', { name: /go to home page/i }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/footer/i)).toBeInTheDocument();
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 });
