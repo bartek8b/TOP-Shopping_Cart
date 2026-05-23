@@ -1,4 +1,4 @@
-import { useCart } from '../CartProvider/useCart';
+import { useCart } from '../../components/CartProvider/useCart';
 import { CartItem } from '../../components/CartItem/CartItem';
 import RecycleIcon from '../../assets/icons/recycle-solid-full.svg?react';
 import CheckOutIcon from '../../assets/icons/circle-dollar-to-slot-solid-full.svg?react';
