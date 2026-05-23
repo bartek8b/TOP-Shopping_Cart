@@ -14,34 +14,30 @@ function TestComponent() {
     clearCart,
   } = useCart();
 
+  const keyboard = { id: 1, name: 'Keyboard', price: 100 };
+  const mouse = { id: 2, name: 'Mouse', price: 50 };
+
   return (
     <>
       <p>Unique items: {cart.length}</p>
 
       <p>Total items: {cartCount}</p>
 
-      {/* Quantity of first item, or 0 when cart is empty */}
       <p>First item quantity: {cart[0]?.quantity ?? 0}</p>
 
-      <button
-        onClick={() => addToCart({ id: 1, name: 'Keyboard', price: 100 }, 2)}
-      >
-        Add 2 keyboards
+      <button onClick={() => addToCart(keyboard, 2)}>Add 2 keyboards</button>
+
+      <button onClick={() => addToCart(keyboard, 1)}>Add 1 keyboard</button>
+
+      <button onClick={() => addToCart(mouse, 2)}>Add 2 mice</button>
+
+      <button onClick={() => removeFromCart(keyboard, 1)}>
+        Remove 1 keyboard
       </button>
 
-      <button
-        onClick={() => addToCart({ id: 1, name: 'Keyboard', price: 100 }, 1)}
-      >
-        Add 1 keyboard
+      <button onClick={() => removeFromCart(keyboard, 3)}>
+        Remove 3 keyboards
       </button>
-
-      <button onClick={() => addToCart({ id: 2, name: 'Mouse', price: 50 }, 2)}>
-        Add 2 mice
-      </button>
-
-      <button onClick={() => removeFromCart(1, 1)}>Remove 1 keyboard</button>
-
-      <button onClick={() => removeFromCart(1, 3)}>Remove 3 keyboards</button>
 
       <button onClick={() => deleteFromCart(1)}>Remove all keyboards</button>
 
