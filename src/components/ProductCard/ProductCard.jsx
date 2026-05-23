@@ -41,7 +41,6 @@ export const ProductCard = ({ product }) => {
             type="number"
             value={quantity}
             readOnly
-            onChange={() => {}}
             min="1"
             aria-label="Quantity"
           />
