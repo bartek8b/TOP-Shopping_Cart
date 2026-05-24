@@ -23,11 +23,13 @@
   --space-l-static: 48px;
   --space-xl-static: 96px;
 
-  /* Font Families */
   --font-body:
     'main-font', system-ui, -apple-system, Segoe UI, Oxygen, Ubuntu, sans-serif;
-  --font-heading:
-    'headings-font', 'Inter', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'headings-font', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  --primary-color: ;
+  --secondary-color: ;
+  --accent-color: ;
 }
 
 html {
