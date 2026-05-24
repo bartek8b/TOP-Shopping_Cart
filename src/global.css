@@ -25,10 +25,30 @@
     'main-font', system-ui, -apple-system, Segoe UI, Oxygen, Ubuntu, sans-serif;
   --font-heading: 'headings-font', 'Inter', 'Helvetica Neue', Arial, sans-serif;
 
-  --primary-color: #040825; 
+  --primary-color: #040825;
   --secondary-color: #0000ff;
   --accent-color: #00ffff;
   --font-color: #f1e8c7;
+
+  --gradient-section:
+    repeating-linear-gradient(165deg, #0000ffff 0%, #00ffffff 100%),
+    repeating-linear-gradient(4deg, #040825ff 0%, #0000ffff 50%, #00ffffff 100%);
+
+  --gradient-header: repeating-linear-gradient(
+    184deg,
+    #040825ff 0%,
+    #0000ffff 70%,
+    #00ffffff 100%
+  );
+
+  --gradient-footer: repeating-linear-gradient(
+    4deg,
+    #040825ff 0%,
+    #0000ffff 70%,
+    #00ffffff 100%
+  );
+
+  /* background-blend-mode: hard-light; */
 }
 
 * {
@@ -65,9 +85,9 @@ a {
 a:visited {
   color: inherit;
 }
-svg{
-    height: 24px;
-    fill: var(--font-color);
+svg {
+  height: 24px;
+  fill: var(--font-color);
 }
 
 @media (min-width: 768px) {
