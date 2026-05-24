@@ -8,7 +8,7 @@ export const Nav = () => {
 
   return (
     <nav>
-      <NavLink to="/" end aria-label="Go to Home page">
+      <NavLink to="/" end className={styles.logo} aria-label="Go to Home page">
         GoCart
       </NavLink>
 
