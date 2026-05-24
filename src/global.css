@@ -11,44 +11,25 @@
 }
 
 :root {
-  --space-s: 2px;
-  --space-m: 4px;
-  --space-l: 8px;
-  --space-xl: 16px;
-
-  --space-s-static: 8px;
-  --space-m-static: 16px;
-  --space-l-static: 32px;
-  --space-xl-static: 64px;
+  --space-base: 4px;
+  --space-1: calc(var(--space-base) * 1);
+  --space-2: calc(var(--space-base) * 2);
+  --space-3: calc(var(--space-base) * 3);
+  --space-4: calc(var(--space-base) * 4);
+  --space-6: calc(var(--space-base) * 6);
+  --space-8: calc(var(--space-base) * 8);
 
   --font-body:
     'main-font', system-ui, -apple-system, Segoe UI, Oxygen, Ubuntu, sans-serif;
   --font-heading: 'headings-font', 'Inter', 'Helvetica Neue', Arial, sans-serif;
 
-  --primary-color: #040825;
-  --secondary-color: #0000ff;
-  --accent-color: #00ffff;
-  --font-color: #f1e8c7;
+  --background-color: #001b66;
+  --primary-color: #0036cc;
+  --secondary-color: #00cc88;
+  --accent-color: #ccff00;
+  --font-color: #f2f2f2;
 
-  --gradient-section:
-    repeating-linear-gradient(165deg, #0000ffff 0%, #00ffffff 100%),
-    repeating-linear-gradient(4deg, #040825ff 0%, #0000ffff 50%, #00ffffff 100%);
-
-  --gradient-header: repeating-linear-gradient(
-    172deg,
-    #040825ff 0%,
-    #0000ffff 70%,
-    #00ffffff 100%
-  );
-
-  --gradient-footer: repeating-linear-gradient(
-    4deg,
-    #040825ff 0%,
-    #0000ffff 70%,
-    #00ffffff 100%
-  );
-
-  /* background-blend-mode: hard-light; */
+  /* --gradient-section: ; */
 }
 
 * {
@@ -58,16 +39,17 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
-body {
+#root {
   font-family: var(--font-body);
   font-size: calc(0.9rem + 0.2vw);
   color: var(--font-color);
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 h1,
 h2,
@@ -89,41 +71,37 @@ svg {
   height: 24px;
   fill: var(--font-color);
 }
-
-header{
-    background: var(--gradient-header);
+button {
+  background-color: var(--secondary-color);
 }
 
-footer{
-    background: var(--gradient-footer);
-    height: var(--space-xl-static);
+header {
+  background: var(--primary-color);
+  border-radius: 0 0 4px 4px;
+  border-bottom: 1px dotted var(--secondary-color);
+}
+
+footer {
+  background: var(--primary-color);
+  border-top: 1px dotted var(--secondary-color);
+  border-radius: 4px 4px 0 0;
+}
+
+main {
+}
+
+section {
+  padding: var(--space-8);
+  border: 1px solid white;
 }
 
 @media (min-width: 768px) {
-  :root {
-    --space-s: 4px;
-    --space-m: 8px;
-    --space-l: 16px;
-    --space-xl: 32px;
-  }
 }
 
 @media (min-width: 1024px) {
-  :root {
-    --space-s: 8px;
-    --space-m: 16px;
-    --space-l: 32px;
-    --space-xl: 64px;
-  }
 }
 
 @media (min-width: 1920px) {
-  :root {
-    --space-s: 16px;
-    --space-m: 32px;
-    --space-l: 64px;
-    --space-xl: 128px;
-  }
 }
 
 @media (hover: hover) {
