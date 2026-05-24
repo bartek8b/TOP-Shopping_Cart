@@ -16,10 +16,10 @@
   --space-l: 8px;
   --space-xl: 12px;
 
-  --space-s-static: 6px;
-  --space-m-static: 12px;
-  --space-l-static: 24px;
-  --space-xl-static: 36px;
+  --space-s-static: 8px;
+  --space-m-static: 16px;
+  --space-l-static: 32px;
+  --space-xl-static: 64px;
 
   --font-body:
     'main-font', system-ui, -apple-system, Segoe UI, Oxygen, Ubuntu, sans-serif;
@@ -35,7 +35,7 @@
     repeating-linear-gradient(4deg, #040825ff 0%, #0000ffff 50%, #00ffffff 100%);
 
   --gradient-header: repeating-linear-gradient(
-    184deg,
+    172deg,
     #040825ff 0%,
     #0000ffff 70%,
     #00ffffff 100%
@@ -88,6 +88,15 @@ a:visited {
 svg {
   height: 24px;
   fill: var(--font-color);
+}
+
+header{
+    background: var(--gradient-header);
+}
+
+footer{
+    background: var(--gradient-footer);
+    height: var(--space-xl-static);
 }
 
 @media (min-width: 768px) {
