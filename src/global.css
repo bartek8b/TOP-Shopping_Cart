@@ -1,3 +1,15 @@
+/* Update urls of fonts or remove below imports if not using external fonts */
+@font-face {
+  font-family: 'main-font';
+  src: url(./assets/fonts/Roboto-Regular.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'headings-font';
+  src: url(./assets/fonts/NakedPower-Bold.woff2) format('woff2');
+  font-display: swap;
+}
+
 :root {
   --space-xs: 2px;
   --space-s: 4px;
@@ -10,6 +22,27 @@
   --space-m-static: 24px;
   --space-l-static: 48px;
   --space-xl-static: 96px;
+
+  /* Font Families */
+  --font-body:
+    'main-font', system-ui, -apple-system, Segoe UI, Oxygen, Ubuntu, sans-serif;
+  --font-heading:
+    'headings-font', 'Inter', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:visited {
+  color: inherit;
 }
 
 @media (min-width: 768px) {
@@ -39,5 +72,14 @@
     --space-m: 32px;
     --space-l: 64px;
     --space-xl: 128px;
+  }
+}
+
+@media (hover: hover) {
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
