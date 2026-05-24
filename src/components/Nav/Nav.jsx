@@ -13,7 +13,7 @@ export const Nav = () => {
       </NavLink>
 
       {/* Wrapper used to align the logo to the left and the links to the right */}
-      <div>
+      <div className={styles.wrapper}>
         <NavLink
           to="/shop"
           className={({ isActive }) => (isActive ? styles.active : undefined)}

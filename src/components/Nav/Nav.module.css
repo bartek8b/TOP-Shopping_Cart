@@ -6,8 +6,15 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: var(--space-4);
+    padding-block: var(--space-2);
 }
 .logo{
     font-family: var(--font-heading);
     font-size: calc(1.5rem + 0.2dvw);
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
 }
