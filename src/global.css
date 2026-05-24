@@ -14,7 +14,7 @@
   --space-s: 2px;
   --space-m: 4px;
   --space-l: 8px;
-  --space-xl: 12px;
+  --space-xl: 16px;
 
   --space-s-static: 8px;
   --space-m-static: 16px;
@@ -104,25 +104,25 @@ footer{
     --space-s: 4px;
     --space-m: 8px;
     --space-l: 16px;
-    --space-xl: 24px;
+    --space-xl: 32px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --space-s: 6px;
-    --space-m: 12px;
-    --space-l: 24px;
-    --space-xl: 36px;
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 32px;
+    --space-xl: 64px;
   }
 }
 
 @media (min-width: 1920px) {
   :root {
-    --space-s: 8px;
-    --space-m: 16px;
-    --space-l: 32px;
-    --space-xl: 48px;
+    --space-s: 16px;
+    --space-m: 32px;
+    --space-l: 64px;
+    --space-xl: 128px;
   }
 }
 
