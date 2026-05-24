@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import BagIcon from '../../assets/icons/bag-shopping-solid-full.svg?react';
 import CodeIcon from '../../assets/icons/file-code-solid-full.svg?react';
+import styles from './Landing.module.css';
 
 export const Landing = () => {
   return (
-    <div className='landingContainer'>
+    <div className={styles.container}>
       <section className="splitLayout">
         <h1 className="firstChild">GoCart</h1>
         <div className="secondChild">
@@ -13,7 +14,7 @@ export const Landing = () => {
             modern React patterns. Browse products, add items to your cart, and
             explore a complete shopping flow.
           </p>
-          <Link to="/shop">
+          <Link to="/shop" className={styles.cta}>
             <BagIcon aria-hidden="true" />
             Go shopping
           </Link>
@@ -44,6 +45,7 @@ export const Landing = () => {
           href="https://github.com/bartek8b/TOP-Shopping_Cart"
           target="_blank"
           rel="noreferrer"
+          className={styles.cta}
         >
           <CodeIcon aria-hidden="true" />
           Repo
