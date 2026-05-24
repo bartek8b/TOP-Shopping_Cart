@@ -88,12 +88,19 @@ footer {
 }
 
 main {
+  flex: 1;
+  display: flex;
 }
 
 section {
-  padding: var(--space-8);
-  border: 1px solid white;
+  flex: 1;
+  padding-inline: var(--space-2);
+  padding-block: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
+
 
 @media (min-width: 768px) {
 }
