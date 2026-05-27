@@ -79,12 +79,12 @@ button {
 header {
   background: var(--primary-color);
   border-radius: 0 0 4px 4px;
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 footer {
   background: var(--primary-color);
-  border-top: 1px solid var(--secondary-color);
+  border-top: 2px solid var(--secondary-color);
   border-radius: 4px 4px 0 0;
 }
 
