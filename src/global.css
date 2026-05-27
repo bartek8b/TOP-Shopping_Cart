@@ -41,9 +41,6 @@ html {
   scroll-behavior: smooth;
   background-color: var(--bg-dark);
 }
-body{
-  min-height: 100vh;
-}
 #root {
   font-family: var(--font-body);
   font-size: calc(0.9rem + 0.2vw);
@@ -52,7 +49,8 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: inherit;
+  border: 1px solid var(--primary-color);
+  min-height: 100dvh;
 }
 h1,
 h2,
@@ -81,18 +79,18 @@ button {
 header {
   background: var(--primary-color);
   border-radius: 0 0 4px 4px;
-  border-bottom: 1px dotted var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 footer {
   background: var(--primary-color);
-  border-top: 1px dotted var(--secondary-color);
+  border-top: 1px solid var(--secondary-color);
   border-radius: 4px 4px 0 0;
 }
 
 main {
   flex: 1;
-  display: flex;;
+  display: flex;
 }
 
 section {
