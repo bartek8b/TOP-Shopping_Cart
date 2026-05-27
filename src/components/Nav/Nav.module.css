@@ -1,18 +1,18 @@
-.active{
-    border-bottom: 2px solid black;
+.active,
+.active:visited {
+  color: var(--secondary-color);
 }
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.logo{
-    font-family: var(--font-heading);
-    font-size: calc(1.5rem + 0.2dvw);
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
 }
-.wrapper{
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
 }
