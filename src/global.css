@@ -23,11 +23,11 @@
     'main-font', system-ui, -apple-system, Segoe UI, Oxygen, Ubuntu, sans-serif;
   --font-heading: 'headings-font', 'Inter', 'Helvetica Neue', Arial, sans-serif;
 
-  --background-color: #001b66;
-  --primary-color: #0036cc;
-  --secondary-color: #00cc88;
-  --accent-color: #ccff00;
-  --font-color: #f2f2f2;
+  --bg-dark: #cac7bc;
+  --bg-light: #eee9e1;
+  --primary-color: #366969;
+  --secondary-color: #c7964f;
+  --font-color: #1e2a2a;
 
   /* --gradient-section: ; */
 }
