@@ -26,7 +26,7 @@
   --bg-dark: #cac7bc;
   --bg-light: #eee9e1;
   --primary-color: #366969;
-  --secondary-color: #c7964f;
+  --accent-color: #c7964f;
   --font-color: #1e2a2a;
 
   /* --gradient-section: ; */
@@ -74,18 +74,18 @@ svg {
   fill: currentColor;
 }
 button {
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
 }
 
 header {
   background: var(--primary-color);
   border-radius: 0 0 4px 4px;
-  border-bottom: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--accent-color);
 }
 
 footer {
   background: var(--primary-color);
-  border-top: 2px solid var(--secondary-color);
+  border-top: 2px solid var(--accent-color);
   border-radius: 4px 4px 0 0;
 }
 
