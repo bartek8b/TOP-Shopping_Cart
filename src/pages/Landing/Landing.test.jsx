@@ -16,7 +16,7 @@ describe('Landing page', () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('link', { name: /go shopping/i }),
+      screen.getByRole('link', { name: /shop/i }),
     ).toHaveAttribute('href', '/shop');
   });
 });
