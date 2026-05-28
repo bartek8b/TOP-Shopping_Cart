@@ -4,6 +4,7 @@ a.cta {
   padding-inline: var(--space-8);
   padding-block: var(--space-4);
   width: 160px;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
