@@ -9,7 +9,7 @@ nav {
 }
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: calc(1.5rem + 0.1vw);
 }
 .wrapper {
   display: flex;
