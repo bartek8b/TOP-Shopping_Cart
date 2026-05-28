@@ -36,7 +36,7 @@
   padding: 0;
 }
 
-*::selection{
+*::selection {
   background-color: var(--accent-color);
 }
 
@@ -44,11 +44,13 @@ html {
   scroll-behavior: smooth;
   background-color: var(--bg-dark);
 }
+body {
+  background-color: var(--bg-dark);
+}
 #root {
   font-family: var(--font-body);
   font-size: calc(1rem + 0.1vw);
   color: var(--font-color);
-  background-color: var(--bg-dark);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,6 +79,12 @@ svg {
 }
 button {
   background-color: var(--accent-color);
+}
+
+header,
+main,
+footer {
+  padding-inline: clamp(6px, 2%, 24px);
 }
 
 header {
