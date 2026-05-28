@@ -12,7 +12,7 @@ export const Landing = () => {
         </h1>
         <div className="secondChild">
           <p>
-            GoCart is a lightweight e‑commerce prototype built to showcase
+            GoCart is a lightweight e‑commerce demo SPA built to showcase
             modern React patterns. Browse products, add items to your cart, and
             explore a complete shopping flow.
           </p>
