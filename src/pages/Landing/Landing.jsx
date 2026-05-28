@@ -18,7 +18,7 @@ export const Landing = () => {
           </p>
           <Link to="/shop" className={styles.cta}>
             <BagIcon aria-hidden="true" />
-            Go shopping
+            Shop
           </Link>
         </div>
       </section>
