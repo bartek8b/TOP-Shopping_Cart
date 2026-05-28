@@ -13,10 +13,9 @@
   --space-base: 4px;
   --space-1: calc(var(--space-base) * 1);
   --space-2: calc(var(--space-base) * 2);
-  --space-3: calc(var(--space-base) * 3);
   --space-4: calc(var(--space-base) * 4);
-  --space-6: calc(var(--space-base) * 6);
   --space-8: calc(var(--space-base) * 8);
+  --space-16: calc(var(--space-base) * 16);
 
   --font-body:
     'main-font', system-ui, -apple-system, Segoe UI, Oxygen, Ubuntu, sans-serif;
@@ -66,6 +65,7 @@ h5,
 h6 {
   font-family: var(--font-heading);
   color: var(--primary-color);
+  text-align: center;
 }
 a {
   text-decoration: none;
@@ -83,7 +83,7 @@ button {
 }
 
 header,
-main,
+section,
 footer {
   padding-inline: clamp(6px, 2%, 24px);
 }
@@ -102,20 +102,24 @@ footer {
 
 main {
   flex: 1;
-  display: flex;
 }
 
 section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+  display: grid;
+  place-items: center;
+  gap: var(--space-8);
+  padding-block: var(--space-16);
+  border: 1px solid var(--accent-color);
 }
 
 @media (min-width: 768px) {
 }
 
 @media (min-width: 1024px) {
+  section.splitLayout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 @media (min-width: 1920px) {
