@@ -24,8 +24,8 @@ export const Cart = () => {
 
   if (!checkOut) {
     return (
-      <div className="splitLayout">
-        <section>
+      <section className="splitLayout">
+        <div>
           {cart.length === 0 ? (
             <p>The cart is empty</p>
           ) : (
@@ -33,8 +33,8 @@ export const Cart = () => {
               <CartItem key={product.id} product={product} />
             ))
           )}
-        </section>
-        <section>
+        </div>
+        <div>
           <div>
             <p>Total price: {`$ ${total}`}</p>
             <button
@@ -50,8 +50,8 @@ export const Cart = () => {
             Delete all
             <RecycleIcon aria-hidden="true" />
           </button>
-        </section>
-      </div>
+        </div>
+      </section>
     );
   }
 
