@@ -1,6 +1,6 @@
 .active,
 .active:visited {
-  color: var(--secondary-color);
+  color: var(--accent-color);
 }
 nav {
   display: flex;
