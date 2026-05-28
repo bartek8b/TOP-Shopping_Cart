@@ -8,3 +8,6 @@
   flex-direction: column;
   min-width: 100%;
 }
+.logoAccent{
+  color: var(--accent-color);
+}

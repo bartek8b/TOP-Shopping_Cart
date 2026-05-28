@@ -7,7 +7,9 @@ export const Landing = () => {
   return (
     <div className={styles.container}>
       <section className="splitLayout">
-        <h1 className="firstChild">GoCart</h1>
+        <h1 className="firstChild">
+          <span className={styles.logoAccent}>Go</span>Cart
+        </h1>
         <div className="secondChild">
           <p>
             GoCart is a lightweight e‑commerce prototype built to showcase

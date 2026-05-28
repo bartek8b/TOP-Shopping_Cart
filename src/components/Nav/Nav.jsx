@@ -9,7 +9,7 @@ export const Nav = () => {
   return (
     <nav>
       <NavLink to="/" end className={styles.logo} aria-label="Go to Home page">
-        GoCart
+        <span className={styles.logoAccent}>Go</span>Cart
       </NavLink>
 
       {/* Wrapper used to align the logo to the left and the links to the right */}
