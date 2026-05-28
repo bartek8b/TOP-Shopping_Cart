@@ -1,4 +1,5 @@
 import ReactCountryFlag from 'react-country-flag';
+import styles from './Footer.module.css';
 
 export const Footer = () => {
   return (
