@@ -1,0 +1,4 @@
+.shopContainer {
+  display: flex;
+  flex-direction: column;
+}

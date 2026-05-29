@@ -3,6 +3,7 @@ import { ProductCard } from '../../components/ProductCard/ProductCard';
 import { Loader } from '../../components/Loader/Loader';
 import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage';
 import { capitalizeFirstLetter } from '../../utils/capitalizeFirstLetter';
+import styles from './Shop.module.css';
 
 // Custom hook
 const useData = () => {
@@ -46,7 +47,7 @@ export const Shop = () => {
   }
 
   return (
-    <div className="shopContainer">
+    <div className={styles.shopContainer}>
       <label htmlFor="category">
         Category:
         <select

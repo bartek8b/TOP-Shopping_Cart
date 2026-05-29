@@ -3,6 +3,7 @@ import { useCart } from '../CartProvider/useCart';
 import MinusIcon from '../../assets/icons/circle-minus-solid-full.svg?react';
 import PlusIcon from '../../assets/icons/circle-plus-solid-full.svg?react';
 import AddToCartIcon from '../../assets/icons/cart-plus-solid-full.svg?react';
+import styles from './ProductCard.module.css';
 
 export const ProductCard = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
@@ -21,10 +22,10 @@ export const ProductCard = ({ product }) => {
   }
 
   return (
-    <article className="card">
+    <article className={styles.card}>
       <h3>{product.title}</h3>
       <img src={product.image} alt={product.title} />
-      <p>{product.description}</p>
+      <p className={styles.description}>{product.description}</p>
       <div className="purchaseContainer">
         <p>{`$ ${product.price.toFixed(2)}`}</p>
         <div className="inputContainer">
