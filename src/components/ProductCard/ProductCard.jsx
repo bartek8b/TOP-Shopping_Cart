@@ -19,6 +19,7 @@ export const ProductCard = ({ product }) => {
 
   function handleAddToCart() {
     addToCart(product, quantity);
+    setQuantity(1);
   }
 
   return (
@@ -28,10 +29,10 @@ export const ProductCard = ({ product }) => {
       <p className={styles.description}>{product.description}</p>
       <div className={styles.purchaseContainer}>
         <p>{`$ ${product.price.toFixed(2)}`}</p>
-        <div className="inputContainer">
+        <div className={styles.inputContainer}>
           <button
             type="button"
-            className="decrease"
+            className={styles.plusMinus}
             onClick={handleDecrease}
             aria-label="Decrease quantity"
           >
@@ -44,10 +45,11 @@ export const ProductCard = ({ product }) => {
             readOnly
             min="1"
             aria-label="Quantity"
+            tabIndex={-1}
           />
           <button
             type="button"
-            className="increase"
+            className={styles.plusMinus}
             onClick={handleIncrease}
             aria-label="Increase quantity"
           >
@@ -55,7 +57,7 @@ export const ProductCard = ({ product }) => {
           </button>
         </div>
       </div>
-      <button type="button" onClick={handleAddToCart}>
+      <button type="button" onClick={handleAddToCart} className={styles.addBtn}>
         Add to cart <AddToCartIcon aria-hidden="true" />
       </button>
     </article>

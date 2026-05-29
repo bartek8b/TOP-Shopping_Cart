@@ -21,8 +21,7 @@ h3 {
 
 .card img {
   object-fit: contain;
-  aspect-ratio: 1 / 1;
-  width: 256px;
+  width: 128px;
   height: auto;
   flex: 1;
 }
@@ -33,8 +32,7 @@ h3 {
   font-size: calc(0.9rem + 0.1vw);
   height: 15%;
   overflow-y: auto;
-  display: flex;
-  justify-content: center;
+  border-radius: var(--space-1);
 }
 
 .purchaseContainer {
@@ -42,4 +40,70 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: var(--space-4);
+}
+
+.addBtn {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--space-1);
+  font-size: calc(0.9rem + 0.1vw);
+  transition: opacity 0.3s ease;
+}
+
+.addBtn svg {
+  width: 32px;
+}
+
+.addBtn:active {
+  outline: 2px solid var(--primary-color);
+}
+
+.plusMinus {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 999rem;
+  transition: opacity 0.3s ease;
+  background-color: transparent;
+}
+
+.plusMinus svg {
+  width: 40px;
+  height: auto;
+}
+
+.plusMinus:active {
+  outline: 2px solid var(--primary-color);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+input {
+  width: 76px;
+  border: none;
+  padding-left: var(--space-8);
+  padding-block: var(--space-2);
+  border-radius: var(--space-1);
+}
+
+@media (hover: hover) {
+  .addBtn:hover,
+  .plusMinus:hover {
+    opacity: 0.8;
+  }
 }
