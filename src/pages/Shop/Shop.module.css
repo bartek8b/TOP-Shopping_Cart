@@ -14,14 +14,14 @@
   padding-inline: var(--space-4);
   box-shadow: var(--shadow);
   border-radius: var(--space-2);
-  margin-top: var(--space-2);
+  margin-top: var(--space-8);
   max-width: fit-content;
 }
 
 .shop {
   display: grid;
   grid-template-columns: 1fr;
-  padding-block: var(--space-2);
+  padding-block: var(--space-8);
 }
 
 @media (min-width: 768px) {
