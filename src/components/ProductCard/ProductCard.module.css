@@ -24,7 +24,7 @@ h3 {
   width: 128px;
   height: auto;
   flex: 1;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .description {
@@ -40,6 +40,12 @@ h3 {
   font-weight: bold;
   font-size: calc(1.2rem + 0.1vw);
   color: var(--primary-color);
+}
+
+.added {
+  font-weight: bold;
+  font-size: calc(1.2rem + 0.1vw);
+  color: var(--accent-color);
 }
 
 .purchaseContainer {

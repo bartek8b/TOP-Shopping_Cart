@@ -7,6 +7,7 @@ import styles from './ProductCard.module.css';
 
 export const ProductCard = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
+  const [added, setAdded] = useState(0);
   const { addToCart } = useCart();
 
   function handleIncrease() {
@@ -20,6 +21,11 @@ export const ProductCard = ({ product }) => {
   function handleAddToCart() {
     addToCart(product, quantity);
     setQuantity(1);
+    setAdded(quantity);
+
+    setTimeout(() => {
+      setAdded(0);
+    }, 1500);
   }
 
   return (
@@ -28,7 +34,13 @@ export const ProductCard = ({ product }) => {
       <img src={product.image} alt={product.title} />
       <p className={styles.description}>{product.description}</p>
       <div className={styles.purchaseContainer}>
-        <p className={styles.price}>{`$ ${product.price.toFixed(2)}`}</p>
+        {!added && (
+          <p className={styles.price}>{`$ ${product.price.toFixed(2)}`}</p>
+        )}
+        {(added > 0) && (
+          <p className={styles.added}>{added} added to cart!</p>
+        )}
+
         <div className={styles.inputContainer}>
           <button
             type="button"
@@ -57,7 +69,12 @@ export const ProductCard = ({ product }) => {
           </button>
         </div>
       </div>
-      <button type="button" onClick={handleAddToCart} className={styles.addBtn}>
+      <button
+        type="button"
+        onClick={handleAddToCart}
+        className={styles.addBtn}
+        disabled={added}
+      >
         Add to cart <AddToCartIcon aria-hidden="true" />
       </button>
     </article>

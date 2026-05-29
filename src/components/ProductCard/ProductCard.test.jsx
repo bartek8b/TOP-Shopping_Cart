@@ -145,4 +145,27 @@ describe('ProductCard', () => {
       1,
     );
   });
+
+  it('shows added to cart message after clicking add to cart', async () => {
+    const user = userEvent.setup();
+    renderProductCard();
+
+    await user.click(
+      screen.getByRole('button', { name: /increase quantity/i }),
+    );
+    await user.click(screen.getByRole('button', { name: /add to cart/i }));
+
+    expect(screen.getByText(/2 added to cart/i)).toBeInTheDocument();
+  });
+
+  it('disables add to cart button after adding product', async () => {
+    const user = userEvent.setup();
+    renderProductCard();
+
+    const addButton = screen.getByRole('button', { name: /add to cart/i });
+
+    await user.click(addButton);
+
+    expect(addButton).toBeDisabled();
+  });
 });
