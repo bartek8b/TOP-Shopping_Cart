@@ -116,7 +116,7 @@ section {
 @media (min-width: 1024px) {
   section.splitLayout {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
   }
 }
 
