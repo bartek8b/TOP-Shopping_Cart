@@ -27,8 +27,8 @@
   --accent-color: #c7964f;
   --font-color: #1e2a2a;
 
-  --shadow: 1px 1px 16px hsla(0, 0%, 0%, 0.5);
-  --shadow-hover: 4px 4px 16px hsla(0, 0%, 0%, 0.5);
+  --shadow: 1px 1px 16px hsla(0, 0%, 0%, 0.3);
+  --shadow-hover: 4px 4px 16px hsla(0, 0%, 0%, 0.3);
 }
 
 * {
