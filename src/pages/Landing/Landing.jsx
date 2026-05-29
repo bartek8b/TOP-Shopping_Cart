@@ -14,7 +14,7 @@ export const Landing = () => {
           <p className={styles.heroPara}>
             GoCart is a lightweight e‑commerce demo SPA built to showcase
             modern React patterns. Browse products, add items to your cart, and
-            explore a complete shopping flow.
+            enjoy fully responsive layout.
           </p>
           <Link to="/shop" className={styles.cta}>
             <BagIcon aria-hidden="true" />
@@ -23,7 +23,7 @@ export const Landing = () => {
         </div>
       </section>
 
-      <section>
+      <section className={styles.componentsSection}>
         <h2>Components</h2>
         <div className="badgesContainer">
           <div className="componentBadge">

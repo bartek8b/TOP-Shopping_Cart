@@ -47,6 +47,10 @@ p {
   max-width: 50ch;
 }
 
+.heroPara {
+  text-align: center;
+}
+
 .codeCta {
   display: flex;
   flex-direction: column;
@@ -54,9 +58,9 @@ p {
   justify-content: center;
 }
 
-/* section > * {
-  border: 2px solid red;
-} */
+.componentsSection {
+  background: var(--bg-light);
+}
 
 @media (hover: hover) {
   a.cta:hover {
@@ -69,6 +73,10 @@ p {
     font-size: calc(6rem + 0.1vw);
   }
 
+  .heroPara {
+    text-align: left;
+  }
+
   .secondChild {
     display: flex;
     flex-direction: row;
@@ -79,6 +87,6 @@ p {
 
   .codeCta {
     flex-direction: row;
-      gap: var(--space-16);
+    gap: var(--space-16);
   }
 }
