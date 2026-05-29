@@ -26,16 +26,16 @@ export const Landing = () => {
       <section className={styles.componentsSection}>
         <h2>Main Components</h2>
         <div className={styles.badgesContainer}>
-          <div className="componentBadge">
-            <span className="componentSymbol">{'<L />'}</span>
+          <div className={styles.componentBadge}>
+            <span className={styles.componentSymbol}>{'<L/>'}</span>
             <span>Landing</span>
           </div>
-          <div className="componentBadge">
-            <span className="componentSymbol">{'<S />'}</span>
+          <div className={styles.componentBadge}>
+            <span className={styles.componentSymbol}>{'<S/>'}</span>
             <span>Shop</span>
           </div>
-          <div className="componentBadge">
-            <span className="componentSymbol">{'<C />'}</span>
+          <div className={styles.componentBadge}>
+            <span className={styles.componentSymbol}>{'<C/>'}</span>
             <span>Cart</span>
           </div>
         </div>
