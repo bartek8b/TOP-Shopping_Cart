@@ -48,7 +48,7 @@ export const Shop = () => {
 
   return (
     <div className={styles.shopContainer}>
-      <label htmlFor="category">
+      <label htmlFor="category" className={styles.dropdownContainer}>
         Category:
         <select
           id="category"
@@ -65,7 +65,7 @@ export const Shop = () => {
         </select>
       </label>
 
-      <section>
+      <section className={styles.shop}>
         {data.map(
           (product) =>
             (product.category === selectedCategory ||

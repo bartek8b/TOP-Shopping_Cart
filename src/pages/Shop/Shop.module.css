@@ -1,4 +1,49 @@
 .shopContainer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.dropdownContainer {
+  background-color: var(--bg-dark);
+  position: sticky;
+  top: 0px;
+  align-self: start;
+  text-align: center;
+  padding-block: var(--space-2);
+  padding-inline: var(--space-4);
+  box-shadow: var(--shadow);
+  border-radius: var(--space-2);
+  margin-top: var(--space-2);
+  max-width: fit-content;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-block: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .shop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .shopContainer {
+    grid-template-columns: auto 1fr;
+  }
+  .dropdownContainer {
+    margin-left: var(--space-2);
+  }
+  .shop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1920px) {
+  .shop {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
