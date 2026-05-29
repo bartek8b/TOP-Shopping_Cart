@@ -47,6 +47,13 @@ p {
   max-width: 50ch;
 }
 
+.codeCta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* section > * {
   border: 2px solid red;
 } */
@@ -68,5 +75,10 @@ p {
     gap: var(--space-8);
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  .codeCta {
+    flex-direction: row;
+      gap: var(--space-16);
   }
 }
