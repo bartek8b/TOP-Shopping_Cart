@@ -12,7 +12,7 @@ export const Footer = () => {
       >
         <ReactCountryFlag countryCode="PL" />
       </a>{' '}
-      with ❤️ by{' '}
+      by{' '}
       <a href="https://github.com/bartek8b" target="_blank" rel="noopener">
         Bartlomiej Balcerzak
       </a>
