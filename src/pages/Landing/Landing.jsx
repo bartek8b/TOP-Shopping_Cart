@@ -10,8 +10,8 @@ export const Landing = () => {
         <h1>
           <span className={styles.logoAccent}>Go</span>Cart
         </h1>
-        <div className="secondChild">
-          <p>
+        <div className={styles.secondChild}>
+          <p className={styles.heroPara}>
             GoCart is a lightweight e‑commerce demo SPA built to showcase
             modern React patterns. Browse products, add items to your cart, and
             explore a complete shopping flow.

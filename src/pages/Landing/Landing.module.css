@@ -36,9 +36,20 @@ h1 {
   font-size: calc(4rem + 0.1vw);
 }
 
-p{
- max-width: 60ch;
+.secondChild {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  align-items: center;
 }
+
+p {
+  max-width: 50ch;
+}
+
+/* section > * {
+  border: 2px solid red;
+} */
 
 @media (hover: hover) {
   a.cta:hover {
@@ -49,5 +60,13 @@ p{
 @media (min-width: 1024px) {
   h1 {
     font-size: calc(6rem + 0.1vw);
+  }
+
+  .secondChild {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8);
+    align-items: center;
+    justify-content: space-evenly;
   }
 }
