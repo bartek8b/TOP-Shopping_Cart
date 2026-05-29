@@ -123,4 +123,26 @@ describe('ProductCard', () => {
       1,
     );
   });
+
+  it('resets quantity to 1 after adding product to cart', async () => {
+    const user = userEvent.setup();
+    renderProductCard();
+
+    await user.click(
+      screen.getByRole('button', { name: /increase quantity/i }),
+    );
+    await user.click(
+      screen.getByRole('button', { name: /increase quantity/i }),
+    );
+
+    expect(screen.getByRole('spinbutton', { name: /quantity/i })).toHaveValue(
+      3,
+    );
+
+    await user.click(screen.getByRole('button', { name: /add to cart/i }));
+
+    expect(screen.getByRole('spinbutton', { name: /quantity/i })).toHaveValue(
+      1,
+    );
+  });
 });
