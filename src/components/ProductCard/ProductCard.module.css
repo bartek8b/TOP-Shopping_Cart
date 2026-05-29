@@ -36,6 +36,12 @@ h3 {
   border-radius: var(--space-1);
 }
 
+.price {
+  font-weight: bold;
+  font-size: calc(1.2rem + 0.1vw);
+  color: var(--primary-color);
+}
+
 .purchaseContainer {
   display: flex;
   flex-direction: column;

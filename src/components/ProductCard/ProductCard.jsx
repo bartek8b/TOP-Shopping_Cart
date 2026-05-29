@@ -28,7 +28,7 @@ export const ProductCard = ({ product }) => {
       <img src={product.image} alt={product.title} />
       <p className={styles.description}>{product.description}</p>
       <div className={styles.purchaseContainer}>
-        <p>{`$ ${product.price.toFixed(2)}`}</p>
+        <p className={styles.price}>{`$ ${product.price.toFixed(2)}`}</p>
         <div className={styles.inputContainer}>
           <button
             type="button"
