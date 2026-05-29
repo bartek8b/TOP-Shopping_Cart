@@ -106,10 +106,8 @@ main {
 
 section {
   display: grid;
-  place-items: center;
   gap: var(--space-8);
   padding-block: var(--space-16);
-  border: 1px solid var(--accent-color);
 }
 
 @media (min-width: 768px) {
