@@ -119,6 +119,7 @@ header {
   border-radius: 0 0 6px 6px;
   border-bottom: 2px solid var(--accent-color);
   padding-block: var(--space-2);
+  box-shadow: var(--shadow);
 }
 
 footer {
@@ -126,6 +127,7 @@ footer {
   border-top: 2px solid var(--accent-color);
   border-radius: 6px 6px 0 0;
   padding-block: var(--space-8);
+  box-shadow: var(--shadow);
 }
 
 main {
