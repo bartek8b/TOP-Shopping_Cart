@@ -90,7 +90,7 @@ footer {
 
 header {
   background: var(--primary-color);
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 6px 6px;
   border-bottom: 2px solid var(--accent-color);
   padding-block: var(--space-2);
 }
@@ -98,7 +98,7 @@ header {
 footer {
   background: var(--primary-color);
   border-top: 2px solid var(--accent-color);
-  border-radius: 4px 4px 0 0;
+  border-radius: 6px 6px 0 0;
   padding-block: var(--space-8);
 }
 
