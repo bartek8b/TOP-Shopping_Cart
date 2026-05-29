@@ -24,6 +24,7 @@ h3 {
   width: 128px;
   height: auto;
   flex: 1;
+  transform: scale(1.5);
 }
 
 .description {
