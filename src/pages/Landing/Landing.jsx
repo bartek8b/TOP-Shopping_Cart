@@ -24,8 +24,8 @@ export const Landing = () => {
       </section>
 
       <section className={styles.componentsSection}>
-        <h2>Components</h2>
-        <div className="badgesContainer">
+        <h2>Main Components</h2>
+        <div className={styles.badgesContainer}>
           <div className="componentBadge">
             <span className="componentSymbol">{'<L />'}</span>
             <span>Landing</span>

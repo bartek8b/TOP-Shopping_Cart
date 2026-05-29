@@ -62,6 +62,13 @@ p {
   background: var(--bg-light);
 }
 
+.badgesContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+}
+
 @media (hover: hover) {
   a.cta:hover {
     box-shadow: var(--shadow-hover);
@@ -89,4 +96,10 @@ p {
     flex-direction: row;
     gap: var(--space-16);
   }
+
+  .badgesContainer{
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
 }
