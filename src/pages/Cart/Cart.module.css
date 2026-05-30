@@ -18,6 +18,8 @@ section.splitLayout {
   border-radius: var(--space-2);
   box-shadow: var(--shadow);
   max-height: fit-content;
+  position: sticky;
+  top: var(--space-4);
 }
 
 .sum {
@@ -67,7 +69,8 @@ button.checkout {
   color: var(--primary-color);
 }
 
-button.checkout:disabled, button.deleteAll:disabled {
+button.checkout:disabled,
+button.deleteAll:disabled {
   opacity: 0.8;
   cursor: default;
 }
