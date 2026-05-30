@@ -20,6 +20,12 @@
   gap: var(--space-4);
 }
 
+.title{
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: calc(0.9rem + 0.1vw);
+}
+
 .inputContainer {
   display: flex;
   align-items: center;

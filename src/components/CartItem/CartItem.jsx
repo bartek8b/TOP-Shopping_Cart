@@ -15,7 +15,7 @@ export const CartItem = ({ product }) => {
     <article className={styles.container}>
       <div className={styles.descriptionContainer}>
         <img src={product.image} alt={product.title} className={styles.image} />
-        <p>{shortTitle}</p>
+        <p className={styles.title}>{shortTitle}</p>
       </div>
       <div className={styles.inputContainer}>
         <button
@@ -33,6 +33,7 @@ export const CartItem = ({ product }) => {
           readOnly
           min="1"
           aria-label={`Quantity of ${product.title}`}
+          tabIndex={-1}
         />
         <button
           className={styles.plusMinus}
