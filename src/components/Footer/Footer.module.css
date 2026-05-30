@@ -1,5 +1,9 @@
-footer{
-    color: var(--bg-dark);
-    text-align: center;
-    font-size: calc(0.8rem + 0.1vw);
+.container {
+  color: var(--bg-dark);
+  text-align: center;
+  font-size: calc(0.8rem + 0.1vw);
+}
+
+.container a {
+  color: inherit;
 }
