@@ -42,11 +42,6 @@ a.goHomeLink:active {
   outline: 2px solid var(--primary-color);
 }
 
-a.goHomeLink svg {
-  width: 36px;
-  height: auto;
-}
-
 @media (hover: hover) {
   a.goHomeLink:hover {
     box-shadow: var(--shadow-hover);
