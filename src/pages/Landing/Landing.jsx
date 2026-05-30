@@ -6,7 +6,7 @@ import styles from './Landing.module.css';
 export const Landing = () => {
   return (
     <div className={styles.container}>
-      <section className="splitLayout">
+      <section className={styles.splitLayout}>
         <h1>
           <span className={styles.logoAccent}>Go</span>Cart
         </h1>
