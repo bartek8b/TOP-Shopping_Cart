@@ -8,7 +8,7 @@
 }
 
 .spinner {
-  width: 128px;
+  width: 92px;
   height: auto;
   color: var(--primary-color);
   animation: spin 3s linear infinite;
