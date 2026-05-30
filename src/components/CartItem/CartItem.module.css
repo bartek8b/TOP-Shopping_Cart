@@ -26,6 +26,10 @@
   font-size: calc(0.9rem + 0.1vw);
 }
 
+.prodPrice{
+  margin-right: var(--space-4);
+}
+
 .inputContainer {
   display: flex;
   align-items: center;

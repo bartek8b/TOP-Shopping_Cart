@@ -18,6 +18,7 @@ export const CartItem = ({ product }) => {
         <p className={styles.title}>{shortTitle}</p>
       </div>
       <div className={styles.inputContainer}>
+        <span className={styles.prodPrice}>{`$ ${product.price.toFixed(2)}`}</span>
         <button
           className={styles.plusMinus}
           type="button"
