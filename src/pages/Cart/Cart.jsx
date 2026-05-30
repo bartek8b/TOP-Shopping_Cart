@@ -63,14 +63,15 @@ export const Cart = () => {
   }
 
   return (
-    <section>
-      <p>Thank you for using demo</p>
+    <section className={styles.thankYouContainer}>
+      <p className={styles.thankYouMsg}>Thank you for using demo</p>
       <Link
         to="/"
         onClick={() => {
           resetCheckOut();
           clearCart();
         }}
+        className={styles.goHomeLink}
       >
         Go back to home page
       </Link>
