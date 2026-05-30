@@ -27,7 +27,7 @@ export const Cart = () => {
       <section className={styles.splitLayout}>
         <div className={styles.productsContainer}>
           {cart.length === 0 ? (
-            <p>The cart is empty</p>
+            <p className={styles.emptyMsg}>The cart is empty</p>
           ) : (
             cart.map((product) => (
               <CartItem key={product.id} product={product} />
@@ -47,7 +47,12 @@ export const Cart = () => {
             >
               Checkout <CheckOutIcon aria-hidden="true" />
             </button>
-            <button type="button" className={styles.deleteAll} onClick={clearCart}>
+            <button
+              type="button"
+              className={styles.deleteAll}
+              onClick={clearCart}
+              disabled={cart.length === 0}
+            >
               Delete all
               <RecycleIcon aria-hidden="true" />
             </button>

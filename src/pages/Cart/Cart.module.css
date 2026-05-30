@@ -67,10 +67,21 @@ button.checkout {
   color: var(--primary-color);
 }
 
+button.checkout:disabled, button.deleteAll:disabled {
+  opacity: 0.8;
+  cursor: default;
+}
+
 button.deleteAll {
   background-color: transparent;
   border: 1px solid tomato;
   color: tomato;
+}
+
+.emptyMsg {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: calc(1.2rem + 0.1vw);
 }
 
 @media (min-width: 1024px) {
