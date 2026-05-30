@@ -32,9 +32,9 @@
 }
 
 @media (min-width: 1024px) {
-  .shopContainer {
+  /* .shopContainer {
     grid-template-columns: auto 1fr;
-  }
+  } */
   .dropdownContainer {
     margin-left: var(--space-2);
   }
