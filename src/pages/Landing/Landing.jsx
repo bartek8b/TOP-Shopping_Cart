@@ -46,7 +46,7 @@ export const Landing = () => {
         <a
           href="https://github.com/bartek8b/TOP-Shopping_Cart"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className={styles.cta}
         >
           Repo
