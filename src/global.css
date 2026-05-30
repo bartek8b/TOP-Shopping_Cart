@@ -144,13 +144,6 @@ section {
 @media (min-width: 768px) {
 }
 
-@media (min-width: 1024px) {
-  section.splitLayout {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-  }
-}
-
 @media (min-width: 1920px) {
 }
 
