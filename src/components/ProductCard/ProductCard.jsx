@@ -32,11 +32,17 @@ export const ProductCard = ({ product }) => {
   const shortTitle =
     titleWords.length > 4 ? titleWords.slice(0, 4).join(' ') : product.title;
 
+  const descriptionWords = product.description.split(' ');
+  const shortDescription =
+    descriptionWords.length > 15
+      ? descriptionWords.slice(0, 15).join(' ') + '...'
+      : product.description;
+
   return (
     <article className={styles.card}>
       <h3 className={styles.productName}>{shortTitle}</h3>
       <img src={product.image} alt={product.title} />
-      <p className={styles.description}>{product.description}</p>
+      <p className={styles.description}>{shortDescription}</p>
       <div className={styles.purchaseContainer}>
         {!added && (
           <p className={styles.price}>{`$ ${product.price.toFixed(2)}`}</p>
@@ -54,7 +60,7 @@ export const ProductCard = ({ product }) => {
           </button>
           {/* Quantity input */}
           <input
-          className={styles.input}
+            className={styles.input}
             type="number"
             value={quantity}
             readOnly
