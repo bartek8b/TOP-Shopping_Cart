@@ -8,7 +8,7 @@ export const Landing = () => {
     <div className={styles.container}>
       <section className={styles.splitLayout}>
         <h1>
-          <span className={styles.logoAccent}>Go</span>Cart
+          Go<span className={styles.logoAccent}>Cart</span>
         </h1>
         <div className={styles.secondChild}>
           <p className={styles.heroPara}>
