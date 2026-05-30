@@ -19,14 +19,15 @@ export const CartItem = ({ product }) => {
       </div>
       <div className={styles.inputContainer}>
         <button
+          className={styles.plusMinus}
           type="button"
-          className="decrease"
           onClick={() => removeFromCart(product, 1)}
           aria-label={`Decrease quantity of ${product.title}`}
         >
           <MinusIcon aria-hidden="true" />
         </button>
         <input
+          className={styles.input}
           type="number"
           value={product.quantity}
           readOnly
@@ -34,8 +35,8 @@ export const CartItem = ({ product }) => {
           aria-label={`Quantity of ${product.title}`}
         />
         <button
+          className={styles.plusMinus}
           type="button"
-          className="increase"
           onClick={() => addToCart(product, 1)}
           aria-label={`Increase quantity of ${product.title}`}
         >

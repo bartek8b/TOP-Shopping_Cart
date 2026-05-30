@@ -27,11 +27,67 @@
 }
 
 .deleteBtn {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: var(--space-4);
+  aspect-ratio: 1 / 1;
+  width: 32px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 999rem;
+  background-color: var(--primary-color);
+  transition: opacity 0.3s ease;
+}
+.deleteBtn svg {
+  color: var(--bg-dark);
+  width: 20px;
+}
+
+.input {
+  width: 76px;
+  border: none;
+  padding-left: var(--space-8);
+  padding-block: var(--space-2);
+  border-radius: var(--space-1);
+}
+
+.plusMinus {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 999rem;
+  transition: opacity 0.3s ease;
+  background-color: transparent;
+  transition: opacity 0.3s ease;
+}
+
+.plusMinus svg {
+  width: 32px;
+  height: auto;
+}
+
+.plusMinus:active {
+  outline: 2px solid var(--primary-color);
 }
 
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
+  }
+}
+
+@media (hover: hover) {
+  .deleteBtn:hover,
+  .plusMinus:hover {
+    opacity: 0.8;
+  }
+  .deleteBtn:hover svg {
+    color: tomato;
   }
 }
