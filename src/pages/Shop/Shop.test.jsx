@@ -1,6 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { MemoryRouter } from 'react-router-dom';
 import { CartProvider } from '../../components/CartProvider/CartProvider';
 import { Shop } from './Shop';
 
@@ -10,6 +11,16 @@ describe('Shop Component', () => {
   beforeEach(() => {
     fetch.mockClear();
   });
+
+  function renderShop() {
+    return render(
+      <MemoryRouter>
+        <CartProvider>
+          <Shop />
+        </CartProvider>
+      </MemoryRouter>,
+    );
+  }
 
   it('filters products by selected category', async () => {
     const user = userEvent.setup();
@@ -38,11 +49,7 @@ describe('Shop Component', () => {
       json: async () => mockProducts,
     });
 
-    render(
-      <CartProvider>
-        <Shop />
-      </CartProvider>,
-    );
+    renderShop();
 
     await waitFor(() => {
       expect(screen.getByText('Golden ring')).toBeInTheDocument();
@@ -59,11 +66,7 @@ describe('Shop Component', () => {
   it('renders loader while data is loading', () => {
     fetch.mockImplementation(() => new Promise(() => {}));
 
-    render(
-      <CartProvider>
-        <Shop />
-      </CartProvider>,
-    );
+    renderShop();
 
     expect(screen.getByText(/loading data/i)).toBeInTheDocument();
   });
@@ -73,11 +76,7 @@ describe('Shop Component', () => {
       status: 500,
     });
 
-    render(
-      <CartProvider>
-        <Shop />
-      </CartProvider>,
-    );
+    renderShop();
 
     await waitFor(() => {
       expect(
