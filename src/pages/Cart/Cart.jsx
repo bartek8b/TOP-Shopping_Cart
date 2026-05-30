@@ -18,10 +18,9 @@ export const Cart = () => {
     setCheckOut(false);
   };
 
-  const total = cart.reduce(
-    (sum, article) => sum + article.price * article.quantity,
-    0,
-  );
+  const total = cart
+    .reduce((sum, article) => sum + article.price * article.quantity, 0)
+    .toFixed(2);
 
   if (!checkOut) {
     return (
