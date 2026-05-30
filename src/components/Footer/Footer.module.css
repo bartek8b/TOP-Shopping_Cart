@@ -4,6 +4,6 @@
   font-size: calc(0.8rem + 0.1vw);
 }
 
-.container a {
+.container a, .container a:visited {
   color: inherit;
 }
