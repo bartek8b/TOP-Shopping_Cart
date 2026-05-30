@@ -30,7 +30,7 @@ export const ProductCard = ({ product }) => {
 
   return (
     <article className={styles.card}>
-      <h3>{product.title}</h3>
+      <h3 className={styles.productName}>{product.title}</h3>
       <img src={product.image} alt={product.title} />
       <p className={styles.description}>{product.description}</p>
       <div className={styles.purchaseContainer}>

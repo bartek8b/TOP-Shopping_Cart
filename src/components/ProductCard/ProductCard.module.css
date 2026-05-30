@@ -14,26 +14,27 @@
   padding: var(--space-4);
 }
 
-h3 {
+.productName {
   display: flex;
   align-items: center;
+  font-size: calc(1rem + 0.1vw);
 }
 
 .card img {
   object-fit: contain;
-  width: 128px;
+  width: 96px;
   height: auto;
   flex: 1;
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 .description {
-  background-color: var(--bg-dark);
+  background: var(--bg-dark);
   min-width: 100%;
   font-size: calc(0.8rem + 0.1vw);
   height: 15%;
   overflow-y: auto;
-  border-radius: var(--space-1);
+  border-block: 1px solid var(--accent-color);
 }
 
 .price {
