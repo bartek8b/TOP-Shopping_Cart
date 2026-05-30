@@ -22,17 +22,18 @@
 
 .card img {
   object-fit: contain;
-  width: 96px;
+  aspect-ratio: 1 / 1;
+  width: 64px;
   height: auto;
   flex: 1;
-  transform: scale(1.5);
+  transform: scale(2.5);
 }
 
 .description {
   background: var(--bg-dark);
   min-width: 100%;
   font-size: calc(0.8rem + 0.1vw);
-  height: 15%;
+  height: 96px;
   overflow-y: auto;
   border-block: 1px solid var(--accent-color);
 }
