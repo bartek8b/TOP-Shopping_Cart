@@ -41,7 +41,7 @@
 }
 
 html {
-  background-color: var(--primary-color);
+  background-color: var(--bg-dark);
   scroll-behavior: smooth;
   scrollbar-color: var(--primary-color) var(--bg-dark);
   scrollbar-width: thin;
@@ -67,6 +67,8 @@ html {
 
 body {
   background-color: var(--bg-dark);
+  -webkit-tap-highlight-color: var(--primary-color);
+  line-height: 1.2;
 }
 
 #root {
