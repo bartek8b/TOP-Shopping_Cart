@@ -20,7 +20,7 @@
   gap: var(--space-4);
 }
 
-.title{
+.title {
   color: var(--primary-color);
   font-weight: bold;
   font-size: calc(0.9rem + 0.1vw);
@@ -39,7 +39,7 @@
   justify-content: center;
   margin-left: var(--space-4);
   aspect-ratio: 1 / 1;
-  width: 32px;
+  width: 28px;
   height: auto;
   cursor: pointer;
   border-radius: 999rem;
@@ -47,8 +47,8 @@
   transition: opacity 0.3s ease;
 }
 .deleteBtn svg {
-  color: var(--bg-dark);
-  width: 20px;
+  color: tomato;
+  width: 16px;
 }
 
 .input {
@@ -94,6 +94,6 @@
     opacity: 0.8;
   }
   .deleteBtn:hover svg {
-    color: tomato;
+    color: var(--bg-dark);
   }
 }
