@@ -58,7 +58,8 @@ describe('Cart', () => {
 
     expect(screen.getByText(/keyboard/i)).toBeInTheDocument();
     expect(screen.getByText(/mouse/i)).toBeInTheDocument();
-    expect(screen.getByText(/total price: \$ 250/i)).toBeInTheDocument();
+    expect(screen.getByText(/total:/i)).toBeInTheDocument();
+    expect(screen.getByText('$ 250.00')).toBeInTheDocument();
   });
 
   it('shows thank-you message after checkout click', async () => {

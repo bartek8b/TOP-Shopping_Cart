@@ -34,9 +34,11 @@ export const Cart = () => {
             ))
           )}
         </div>
-        <div>
+        <div className={styles.checkOutContainer}>
+          <p>
+            Total: <span className={styles.sum}>{`$ ${total}`}</span>
+          </p>
           <div>
-            <p>Total price: {`$ ${total}`}</p>
             <button
               type="button"
               className="checkout"
@@ -45,11 +47,11 @@ export const Cart = () => {
             >
               Checkout <CheckOutIcon aria-hidden="true" />
             </button>
+            <button type="button" className="increase" onClick={clearCart}>
+              Delete all
+              <RecycleIcon aria-hidden="true" />
+            </button>
           </div>
-          <button type="button" className="increase" onClick={clearCart}>
-            Delete all
-            <RecycleIcon aria-hidden="true" />
-          </button>
         </div>
       </section>
     );
