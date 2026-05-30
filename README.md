@@ -15,7 +15,6 @@ Make responsive e-commerce-like Single Page Application (SPA) using modern React
 - Increase and decrease item quantity
 - Remove single items from cart
 - Clear the whole cart
-- Demo checkout flow
 - Responsive layout for mobile and desktop
 
 ## 🛠️ Tech stack
