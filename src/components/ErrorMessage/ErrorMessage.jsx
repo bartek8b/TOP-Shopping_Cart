@@ -12,9 +12,9 @@ export const ErrorMessage = ({ type }) => {
   }
 
   return (
-    <>
+    <div>
       <ErrorIcon aria-hidden="true" />
       <p>{message}</p>
-    </>
+    </div>
   );
 };
