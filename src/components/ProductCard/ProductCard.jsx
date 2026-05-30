@@ -28,18 +28,20 @@ export const ProductCard = ({ product }) => {
     }, 1500);
   }
 
+  const titleWords = product.title.split(' ');
+  const shortTitle =
+    titleWords.length > 4 ? titleWords.slice(0, 4).join(' ') : product.title;
+
   return (
     <article className={styles.card}>
-      <h3 className={styles.productName}>{product.title}</h3>
+      <h3 className={styles.productName}>{shortTitle}</h3>
       <img src={product.image} alt={product.title} />
       <p className={styles.description}>{product.description}</p>
       <div className={styles.purchaseContainer}>
         {!added && (
           <p className={styles.price}>{`$ ${product.price.toFixed(2)}`}</p>
         )}
-        {(added > 0) && (
-          <p className={styles.added}>{added} added to cart!</p>
-        )}
+        {added > 0 && <p className={styles.added}>{added} added to cart!</p>}
 
         <div className={styles.inputContainer}>
           <button

@@ -6,11 +6,15 @@ import TrashIcon from '../../assets/icons/trash-can-solid-full.svg?react';
 export const CartItem = ({ product }) => {
   const { addToCart, removeFromCart, deleteFromCart } = useCart();
 
+  const titleWords = product.title.split(' ');
+  const shortTitle =
+    titleWords.length > 4 ? titleWords.slice(0, 4).join(' ') : product.title;
+
   return (
     <article>
       <div className="descriptionContainer">
         <img src={product.image} alt={product.title} />
-        <p>{product.title}</p>
+        <p>{shortTitle}</p>
       </div>
       <div className="inputContainer">
         <button
