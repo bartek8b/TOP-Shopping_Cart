@@ -10,11 +10,6 @@ section.splitLayout {
 
 @media (min-width: 1024px) {
   .splitLayout {
-    grid-template-columns: 3fr 1fr;
-  }
-}
-@media (min-width: 1920px) {
-  .splitLayout {
     grid-template-columns: 2fr 1fr;
   }
 }
