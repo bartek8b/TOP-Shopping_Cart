@@ -4,6 +4,7 @@ import RecycleIcon from '../../assets/icons/recycle-solid-full.svg?react';
 import CheckOutIcon from '../../assets/icons/circle-dollar-to-slot-solid-full.svg?react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import styles from './Cart.module.css';
 
 export const Cart = () => {
   const { cart, clearCart } = useCart();
@@ -24,7 +25,7 @@ export const Cart = () => {
 
   if (!checkOut) {
     return (
-      <section className="splitLayout">
+      <section className={styles.splitLayout}>
         <div>
           {cart.length === 0 ? (
             <p>The cart is empty</p>
