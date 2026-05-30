@@ -22,6 +22,7 @@
 .shop {
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
   padding-block: var(--space-8);
 }
 
