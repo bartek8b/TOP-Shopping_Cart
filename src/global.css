@@ -138,7 +138,6 @@ main {
 section {
   display: grid;
   gap: var(--space-8);
-  padding-block: var(--space-8);
 }
 
 @media (min-width: 768px) {

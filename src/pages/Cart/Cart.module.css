@@ -1,5 +1,20 @@
+.productsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+section.splitLayout {
+  padding-block: var(--space-8);
+}
+
 @media (min-width: 1024px) {
   .splitLayout {
     grid-template-columns: 3fr 1fr;
+  }
+}
+@media (min-width: 1920px) {
+  .splitLayout {
+    grid-template-columns: 2fr 1fr;
   }
 }

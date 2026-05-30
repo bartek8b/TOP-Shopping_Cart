@@ -25,7 +25,7 @@ export const Cart = () => {
   if (!checkOut) {
     return (
       <section className={styles.splitLayout}>
-        <div>
+        <div className={styles.productsContainer}>
           {cart.length === 0 ? (
             <p>The cart is empty</p>
           ) : (

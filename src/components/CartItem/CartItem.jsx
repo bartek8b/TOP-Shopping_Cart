@@ -12,12 +12,12 @@ export const CartItem = ({ product }) => {
     titleWords.length > 4 ? titleWords.slice(0, 4).join(' ') : product.title;
 
   return (
-    <article>
-      <div className="descriptionContainer">
-        <img src={product.image} alt={product.title} />
+    <article className={styles.container}>
+      <div className={styles.descriptionContainer}>
+        <img src={product.image} alt={product.title} className={styles.image} />
         <p>{shortTitle}</p>
       </div>
-      <div className="inputContainer">
+      <div className={styles.inputContainer}>
         <button
           type="button"
           className="decrease"
@@ -43,7 +43,7 @@ export const CartItem = ({ product }) => {
         </button>
         <button
           type="button"
-          className="delete"
+          className={styles.deleteBtn}
           onClick={() => deleteFromCart(product.id)}
           aria-label={`Delete ${product.title} from cart`}
         >

@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+  background-color: var(--bg-light);
+  padding: var(--space-4);
+  border-radius: var(--space-2);
+  box-shadow: var(--shadow);
+}
+
+.image {
+  height: var(--space-8);
+}
+
+.descriptionContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.deleteBtn {
+  margin-left: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
