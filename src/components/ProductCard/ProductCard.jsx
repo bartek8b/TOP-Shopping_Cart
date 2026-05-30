@@ -54,6 +54,7 @@ export const ProductCard = ({ product }) => {
           </button>
           {/* Quantity input */}
           <input
+          className={styles.input}
             type="number"
             value={quantity}
             readOnly
