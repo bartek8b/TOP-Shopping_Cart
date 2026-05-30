@@ -14,6 +14,10 @@ section.splitLayout {
   align-items: center;
   gap: var(--space-4);
   padding-block: var(--space-8);
+  background-color: var(--bg-light);
+  border-radius: var(--space-2);
+  box-shadow: var(--shadow);
+  max-height: fit-content;
 }
 
 .sum {
@@ -22,12 +26,61 @@ section.splitLayout {
   font-size: calc(1.2rem + 0.1vw);
 }
 
+.btnsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  padding-inline: var(--space-8);
+}
+
+.btnsContainer button {
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  padding-inline: var(--space-8);
+  padding-block: var(--space-4);
+  width: 192px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+  border-radius: var(--space-1);
+  will-change: opacity;
+  transition: opacity 0.3s ease;
+}
+
+.btnsContainer button svg {
+  width: var(--space-8);
+  height: auto;
+}
+
+.btnsContainer button:active {
+  outline: 2px solid var(--primary-color);
+}
+
+button.checkout {
+  color: var(--primary-color);
+}
+
+button.deleteAll {
+  background-color: transparent;
+  border: 2px solid tomato;
+  color: tomato;
+}
+
 @media (min-width: 1024px) {
   .splitLayout {
     grid-template-columns: 2fr 1fr;
   }
+}
 
-  .checkOutContainer {
-    padding-block: 0;
+@media (hover: hover) {
+  .btnsContainer button:hover {
+    opacity: 0.8;
   }
 }

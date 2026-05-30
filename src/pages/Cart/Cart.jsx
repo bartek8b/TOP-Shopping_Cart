@@ -38,16 +38,16 @@ export const Cart = () => {
           <p>
             Total: <span className={styles.sum}>{`$ ${total}`}</span>
           </p>
-          <div>
+          <div className={styles.btnsContainer}>
             <button
               type="button"
-              className="checkout"
+              className={styles.checkout}
               onClick={handleCheckOut}
               disabled={cart.length === 0}
             >
               Checkout <CheckOutIcon aria-hidden="true" />
             </button>
-            <button type="button" className="increase" onClick={clearCart}>
+            <button type="button" className={styles.deleteAll} onClick={clearCart}>
               Delete all
               <RecycleIcon aria-hidden="true" />
             </button>
