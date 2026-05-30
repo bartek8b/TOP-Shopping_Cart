@@ -27,7 +27,15 @@ export const Nav = () => {
           aria-label="Go to cart"
         >
           <div className={styles.iconWrapper}>
-            {cartCount > 0 && <div className={styles.badge}>{cartCount}</div>}
+            {cartCount > 0 && (
+              <div
+                className={styles.badge}
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                {cartCount}
+              </div>
+            )}
             <CartIcon aria-hidden="true" />
           </div>
         </NavLink>

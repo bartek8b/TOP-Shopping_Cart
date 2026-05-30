@@ -8,6 +8,12 @@ vi.mock('../../assets/icons/cart-shopping-solid-full.svg?react', () => ({
   default: (props) => <svg data-testid="cart-icon" {...props} />,
 }));
 
+vi.mock('../CartProvider/useCart', () => ({
+  useCart: () => ({
+    cartCount: 3,
+  }),
+}));
+
 import { Nav } from './Nav';
 
 describe('Nav', () => {
@@ -60,5 +66,18 @@ describe('Nav', () => {
     expect(screen.getByRole('link', { name: /go to cart/i })).not.toHaveClass(
       styles.active,
     );
+  });
+
+  it('renders cart badge as a polite live region when cart has items', () => {
+    render(
+      <MemoryRouter>
+        <Nav />
+      </MemoryRouter>,
+    );
+
+    const badge = screen.getByText('3');
+
+    expect(badge).toHaveAttribute('aria-live', 'polite');
+    expect(badge).toHaveAttribute('aria-atomic', 'true');
   });
 });
