@@ -67,7 +67,7 @@ html {
 
 body {
   background-color: var(--bg-dark);
-  -webkit-tap-highlight-color: var(--primary-color);
+  -webkit-tap-highlight-color: hsla(180, 32%, 31%, 0.5);
   line-height: 1.2;
 }
 
